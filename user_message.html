@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/static/form_style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Caesar Cipher</title>
+</head>
+
+<body>
+    <section id="centered" class="centered">
+        <form action="/user_message" method="POST">
+            <header>Web Caesar Cipher</header>
+            <textarea id="message" name="message" placeholder="Enter your message"></textarea><br>
+          <label for="shift">Shift by:</label>
+            <input type="number" name="shift" min="1" max="25" placeholder="1 to 25">
+          <label for="shift">places</label>
+<br>
+            <input type="radio" id="encrypt" name="code_action" value="encrypt" checked>
+            <label for="encrypt">encrypt</label><br>
+            <input type="radio" id="decrypt" name="code_action" value="decrypt">
+            <label for="decrypt">decrypt</label><br>
+
+            <button>Submit</button>
+        </form>
+    </section>
+  
+  <section id="output">
+    <p>Original message: {{original_message}}</p>
+    <p>Coded Message:</p>
+  </section>
+
+</body>
+
+</html>
